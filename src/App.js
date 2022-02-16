@@ -7,8 +7,13 @@ import Favorites from "./pages/Favorites";
 import Error from "./components/Error";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { library } from "@fortawesome/fontawesome-svg-core";
-import {} from "@fortawesome/free-solid-svg-icons";
-library.add();
+import {
+  faAngleDown,
+  faAngleLeft,
+  faAngleRight,
+  faMagnifyingGlass,
+} from "@fortawesome/free-solid-svg-icons";
+library.add(faAngleDown, faAngleLeft, faAngleRight, faMagnifyingGlass);
 
 function App() {
   return (
