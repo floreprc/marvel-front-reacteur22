@@ -37,4 +37,9 @@
   font-weight: 700;
   font-size: 18px;
   border: none;
+  cursor: pointer;
+}
+
+.nav-buttons button:hover {
+  color: rgb(214, 172, 172);
 }

@@ -5,7 +5,7 @@ import logoColored from "../assets/img/logo_colored.png";
 
 const Navigation = () => {
   return (
-    <div className="dark-grey-background">
+    <div className="dark-grey-background nav">
       <div className="nav-bar wrapped">
         <Link to="/">
           <div className="image-wrapper">
