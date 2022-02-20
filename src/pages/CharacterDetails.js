@@ -4,7 +4,6 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import axios from "axios";
 import Loader from "../components/Loader";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const CharacterDetails = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -49,10 +48,6 @@ const CharacterDetails = () => {
           <div>
             <h2>{character.name}</h2>
             <p>{character.description}</p>
-            <button>
-              <FontAwesomeIcon icon="heart" />
-              Ajouter aux favoris
-            </button>
           </div>
         </div>
 

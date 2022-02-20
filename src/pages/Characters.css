@@ -127,3 +127,50 @@
   -webkit-transform: scale(1.3); /* Safari 3-8 */
   transform: scale(1.3);
 }
+
+.heartButton {
+  background-color: transparent;
+  border: none;
+  color: red;
+}
+
+.heartButton:hover {
+  background-color: transparent;
+  border: none;
+  color: rgb(255, 108, 108);
+}
+
+.heart-and-title {
+  display: flex;
+}
+
+@media (max-width: 1200px) {
+  .character-caroussel {
+    gap: 15px;
+  }
+
+  .character-box {
+    height: 200px;
+    width: 22%;
+  }
+}
+@media (max-width: 768px) {
+  .title .search-bar {
+    width: 200px;
+  }
+  .character-caroussel {
+    gap: 10px;
+  }
+
+  .character-box {
+    height: 120px;
+    width: 22%;
+  }
+
+  .character-box h2 {
+    font-size: 12px;
+  }
+  .character-info-bottom {
+    display: none;
+  }
+}

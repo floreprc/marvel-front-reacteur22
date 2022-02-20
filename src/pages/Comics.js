@@ -33,9 +33,9 @@ const Comics = () => {
 
         setComicsList(response.data.results);
         console.log(response.data);
+        setIsLoading(false);
       };
       fetchData();
-      setIsLoading(false);
     } catch {}
   }, [searchText, pageNumber, resultsForEachPage]);
 

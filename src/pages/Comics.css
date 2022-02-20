@@ -35,3 +35,22 @@
   font-weight: bold;
   margin-top: 15px;
 }
+
+@media (max-width: 1200px) {
+  .comics-caroussel {
+    gap: 15px;
+  }
+}
+@media (max-width: 768px) {
+  .comics-caroussel {
+    gap: 10px;
+  }
+
+  .comics-box {
+    height: 300px;
+    width: 20%;
+  }
+  .comics-box img {
+    height: 65%;
+  }
+}

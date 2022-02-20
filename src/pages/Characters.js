@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const Characters = () => {
+const Characters = ({ addFavoriteCharacter }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [characterList, setCharacterList] = useState([]);
   const [searchText, setSearchText] = useState("");
@@ -35,9 +35,9 @@ const Characters = () => {
         );
 
         setCharacterList(response.data.results);
+        setIsLoading(false);
       };
       fetchData();
-      setIsLoading(false);
     } catch {}
   }, [searchText, pageNumber, resultsForEachPage]);
   return (
@@ -91,7 +91,18 @@ const Characters = () => {
                   </Link>
                   <div className="character-info">
                     <h2 className="character-info-header">
-                      {elem.name.toUpperCase()}
+                      <div>
+                        <button
+                          onClick={() => {
+                            addFavoriteCharacter(elem);
+                          }}
+                          className="heartButton"
+                        >
+                          <FontAwesomeIcon icon="heart" />
+                        </button>
+                        {elem.name.toUpperCase()}
+                      </div>
+
                       {elem.description && (
                         <p>
                           <FontAwesomeIcon icon="angle-down" />
@@ -100,7 +111,17 @@ const Characters = () => {
                     </h2>
                     {elem.description && (
                       <div className="character-info-bottom">
-                        <h2>{elem.name.toUpperCase()}</h2>
+                        <div className="heart-and-title">
+                          <button
+                            onClick={() => {
+                              addFavoriteCharacter(elem);
+                            }}
+                            className="heartButton"
+                          >
+                            <FontAwesomeIcon icon="heart" />
+                          </button>
+                          <h2>{elem.name.toUpperCase()}</h2>
+                        </div>
                         <p>{elem.description}</p>
                       </div>
                     )}

@@ -43,3 +43,15 @@
 .nav-buttons button:hover {
   color: rgb(214, 172, 172);
 }
+
+@media (max-width: 1200px) {
+}
+@media (max-width: 768px) {
+  .nav-buttons button {
+    font-weight: 700;
+    font-size: 14px;
+  }
+  .nav-buttons {
+    gap: 8px;
+  }
+}

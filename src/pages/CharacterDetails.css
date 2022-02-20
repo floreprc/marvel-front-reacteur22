@@ -1,10 +1,12 @@
 .background-details {
   position: relative;
+  width: auto;
 }
 
 .background-image-details {
   width: 100%;
-  height: 90vh;
+  min-height: 90vh;
+  max-height: auto;
   object-fit: cover;
 }
 
@@ -78,4 +80,48 @@
 .character-details-box .comics-character-caroussel img {
   height: 85%;
   max-width: 250px;
+}
+
+@media (max-width: 1200px) {
+  .character-details-box {
+    background-color: antiquewhite;
+    height: auto;
+  }
+  .character-details-box .main-infos img {
+    width: 200px;
+    height: 200px;
+  }
+  .character-details-box .comics-character-caroussel {
+    height: 300px;
+  }
+}
+@media (max-width: 768px) {
+  .character-details-box {
+    height: auto;
+  }
+
+  .character-details-box .main-infos img {
+    width: 100px;
+    height: 100px;
+  }
+  .character-details-box .main-infos h2 {
+    font-size: 20px;
+    margin: 10px 0;
+  }
+  .character-details-box .comics-character-caroussel {
+    width: 100%;
+    height: 450px;
+    overflow: visible;
+    flex-wrap: wrap;
+  }
+
+  .character-details-box .comics-character-caroussel div {
+    flex: 15%;
+    width: 70px;
+    max-width: 70px;
+    max-height: 200px;
+  }
+  .character-details-box .comics-character-caroussel p {
+    font-size: 14px;
+  }
 }
