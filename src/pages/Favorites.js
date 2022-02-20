@@ -30,7 +30,7 @@ const Favorites = () => {
       };
       fetchData();
     } catch {}
-  }, []);
+  }, [characterFavoriteList]);
 
   return isLoading ? (
     <Loader />

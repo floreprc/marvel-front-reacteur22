@@ -30,7 +30,6 @@ library.add(
 
 function App() {
   const [favoriteCharacters, setFavoriteCharacters] = useState([]);
-  const [favoriteComics, setFavoriteComics] = useState([]);
 
   const addFavoriteCharacter = (elem) => {
     const newFavoriteCharacters = [...favoriteCharacters];
