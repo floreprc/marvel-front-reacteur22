@@ -7,10 +7,11 @@ import "./Favorites.css";
 const Favorites = () => {
   const [characterFavoriteList, setCharacterFavoriteList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
+  // const newCharacterFavoriteList = [...characterFavoriteList];
 
   useEffect(() => {
     try {
-      const newCharacterFavoriteList = [...characterFavoriteList];
+      let favoriteResult = [];
       const fetchData = async () => {
         const response = await axios.get(
           `https://marvel-back-reacteur22-flore.herokuapp.com/characters`
@@ -22,15 +23,15 @@ const Favorites = () => {
             const responseById = await axios.get(
               `https://marvel-back-reacteur22-flore.herokuapp.com/character?characterId=${result}`
             );
-            newCharacterFavoriteList.push(responseById.data);
+            favoriteResult.push(responseById.data);
           }
         }
-        setCharacterFavoriteList(newCharacterFavoriteList);
+        setCharacterFavoriteList(favoriteResult);
         setIsLoading(false);
       };
       fetchData();
     } catch {}
-  }, [characterFavoriteList]);
+  }, []);
 
   return isLoading ? (
     <Loader />
