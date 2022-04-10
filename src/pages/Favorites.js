@@ -7,7 +7,6 @@ import "./Favorites.css";
 const Favorites = () => {
   const [characterFavoriteList, setCharacterFavoriteList] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  // const newCharacterFavoriteList = [...characterFavoriteList];
 
   useEffect(() => {
     try {
